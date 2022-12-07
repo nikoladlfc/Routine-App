@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // COMPONENTS
 import MobileNavbar from "./MobileNavbar";
@@ -7,9 +7,11 @@ import MobileNavbar from "./MobileNavbar";
 import "./styles/RoutineApp.scss";
 
 function RoutineApp() {
+  const [currentDate, setCurrentDate] = useState("17 August 2022");
+
   return (
     <div className="RoutineApp">
-      <MobileNavbar />
+      <MobileNavbar currentDate={currentDate} />
     </div>
   );
 }

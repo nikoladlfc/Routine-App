@@ -1,0 +1,88 @@
+@import "./variables.scss";
+
+.SidebarSection {
+  background-color: $sidebarClr;
+  height: 100%;
+
+  .sidebar-content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 3rem;
+    justify-content: space-between;
+
+    // AVATAR
+    .avatar-wrap {
+      @include center;
+      flex-direction: column;
+      margin-top: 20%;
+
+      .avatar-text {
+        font-weight: bold;
+        color: $greenClr;
+        font-size: 1.8rem;
+        font-style: italic;
+        margin-top: 0.5rem;
+      }
+    }
+
+    // STREAK BARS
+    .sidebar-streak-wrap {
+      width: 100%;
+      margin-top: -10rem;
+
+      .sidebar-streak {
+        width: 100%;
+        min-height: 40px;
+        @include center;
+        background-color: $yellowClr;
+        border-radius: 500px;
+
+        &:first-child {
+          background-color: $greenClr;
+        }
+        &:last-child {
+          margin-top: 1rem;
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: $textClr-light;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+
+    // LOGIN / LOGOUT
+    .log-stack {
+      width: 100%;
+
+      .log-wrap {
+        display: flex;
+        svg {
+          font-size: 2rem;
+          color: $textClr-dark;
+        }
+        a {
+          font-size: 1.8rem;
+          color: $textClr-light;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .s-wrap {
+        margin-left: 0.8rem;
+        a {
+          color: $textClr-dark;
+          font-size: 1rem;
+          text-decoration: underline;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}

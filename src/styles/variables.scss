@@ -1,0 +1,21 @@
+/* VARIABLES
+========================================================================== */
+
+$backgroundClr: #222c41;
+$itemClr: #384154;
+$sidebarClr: #151515;
+$textClr-light: #ffffff;
+$textClr-dark: #e5e5e5;
+$greenClr: #44b25c;
+$redClr: #d14343;
+$yellowClr: #df714e;
+// $yellowClr: #e7c655;
+
+/* MIXINS
+========================================================================== */
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

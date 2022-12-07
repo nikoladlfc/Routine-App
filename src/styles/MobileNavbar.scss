@@ -1,4 +1,8 @@
 .MobileNavbar {
   min-height: 60px;
-  background-color: #202837;
+  background-color: #202837 !important;
+
+  .navbar-date {
+    font-size: 1.8rem;
+  }
 }

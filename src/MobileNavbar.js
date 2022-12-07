@@ -2,17 +2,15 @@ import React from "react";
 // STYLES
 import "./styles/MobileNavbar.scss";
 // HOOKS
-import useToggleState from "./hooks/useToggleState";
-import { AppBar, Toolbar } from "@mui/material";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import Sidebar from "./Sidebar";
 
-function MobileNavbar() {
-  const [isSidebarOpen, setSidebarOpen] = useToggleState(false);
-
+function MobileNavbar(props) {
   return (
-    <AppBar>
-      <Toolbar>
+    <AppBar className="MobileNavbar">
+      <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
         <Sidebar></Sidebar>
+        <Typography className="navbar-date">{props.currentDate}</Typography>
       </Toolbar>
     </AppBar>
   );
